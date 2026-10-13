@@ -26,3 +26,16 @@ sections:
       - {id: s2-l4, type: theory, minutes: 13, file: 04-correlation.md, title: "Корреляции, мультиколлинеарность и конфаундеры"}
       - {id: s2-l5, type: theory, minutes: 15, file: 05-feature-preparation.md, title: "Подготовка признаков: кодирование, масштаб, пропуски"}
       - {id: s2-l6, type: practice, minutes: 25, file: 06-practice-pipeline.yaml, title: "Практика: конвейер подготовки признаков"}
+
+  - id: s3
+    dir: section-3
+    title: Классические модели прогноза риска
+    description: От постановки задачи до логистической регрессии, деревьев решений и ансамблей на данных реальных пациентов.
+    lessons:
+      - {id: s3-l1, type: theory, minutes: 13, file: 01-ml-task.md, title: "Задача машинного обучения в медицине"}
+      - {id: s3-l2, type: theory, minutes: 15, file: 02-logistic-regression.md, title: "Логистическая регрессия и отношение шансов"}
+      - {id: s3-l3, type: practice, minutes: 25, file: 03-practice-logreg.yaml, title: "Практика: логистическая регрессия для диагностики ИБС"}
+      - {id: s3-l4, type: theory, minutes: 14, file: 04-knn-trees.md, title: "Метод ближайших соседей и деревья решений"}
+      - {id: s3-l5, type: practice, minutes: 25, file: 05-practice-tree.yaml, title: "Практика: дерево решений для прогноза исхода"}
+      - {id: s3-l6, type: theory, minutes: 14, file: 06-ensembles.md, title: "Ансамбли: случайный лес и градиентный бустинг"}
+      - {id: s3-l7, type: practice, minutes: 25, file: 07-practice-compare.yaml, title: "Практика: сравнение трёх моделей"}
