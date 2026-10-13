@@ -1,0 +1,16 @@
+title: "CardioAI: Аналитика данных и машинное обучение"
+
+sections:
+  - id: s1
+    dir: section-1
+    title: Медицинские данные и разведочный анализ
+    description: Какими бывают клинические данные, как их безопасно хранить, проверять и показывать на графиках.
+    lessons:
+      - {id: s1-l1, type: theory, minutes: 12, file: 01-medical-data.md, title: "Медицинские данные и два наших датасета"}
+      - {id: s1-l2, type: theory, minutes: 12, file: 02-ethics.md, title: "Этика, деидентификация и правовые рамки"}
+      - {id: s1-l3, type: theory, minutes: 15, file: 03-pandas.md, title: "pandas для клинических таблиц"}
+      - {id: s1-l4, type: practice, minutes: 20, file: 04-practice-first-look.yaml, title: "Практика: первый осмотр данных о сердечной недостаточности"}
+      - {id: s1-l5, type: theory, minutes: 15, file: 05-data-quality.md, title: "Качество данных: пропуски, невозможные значения, выбросы"}
+      - {id: s1-l6, type: theory, minutes: 14, file: 06-visualization.md, title: "Визуализация клинических показателей"}
+      - {id: s1-l7, type: practice, minutes: 25, file: 07-practice-cleaning.yaml, title: "Практика: очистка данных об ишемической болезни сердца"}
+
