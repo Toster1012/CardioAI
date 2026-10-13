@@ -14,3 +14,15 @@ sections:
       - {id: s1-l6, type: theory, minutes: 14, file: 06-visualization.md, title: "Визуализация клинических показателей"}
       - {id: s1-l7, type: practice, minutes: 25, file: 07-practice-cleaning.yaml, title: "Практика: очистка данных об ишемической болезни сердца"}
 
+
+  - id: s2
+    dir: section-2
+    title: Статистика и подготовка признаков
+    description: Описательная статистика, сравнение групп пациентов, связи между показателями и подготовка таблицы к обучению модели.
+    lessons:
+      - {id: s2-l1, type: theory, minutes: 13, file: 01-descriptive.md, title: "Описательная статистика и распределения"}
+      - {id: s2-l2, type: theory, minutes: 15, file: 02-group-comparison.md, title: "Сравнение групп: тесты и ловушки p-значения"}
+      - {id: s2-l3, type: practice, minutes: 25, file: 03-practice-groups.yaml, title: "Практика: чем различаются выжившие и умершие пациенты"}
+      - {id: s2-l4, type: theory, minutes: 13, file: 04-correlation.md, title: "Корреляции, мультиколлинеарность и конфаундеры"}
+      - {id: s2-l5, type: theory, minutes: 15, file: 05-feature-preparation.md, title: "Подготовка признаков: кодирование, масштаб, пропуски"}
+      - {id: s2-l6, type: practice, minutes: 25, file: 06-practice-pipeline.yaml, title: "Практика: конвейер подготовки признаков"}
