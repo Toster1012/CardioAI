@@ -38,6 +38,7 @@
 }
 
 *, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
 
 html { -webkit-text-size-adjust: 100%; }
 
@@ -424,14 +425,14 @@ pre code { font-size: inherit; background: none; padding: 0; color: inherit; }
 .editor .CodeMirror-selected { background: #3a3785; }
 .editor .CodeMirror-focused .CodeMirror-selected { background: #45419a; }
 .editor .CodeMirror-matchingbracket { color: #fff !important; background: #45419a; }
-.editor .cm-keyword, .editor .cm-operator.cm-keyword { color: #c4a7ff; }
-.editor .cm-builtin { color: #8fd3ff; }
-.editor .cm-def { color: #9fb4ff; }
-.editor .cm-string { color: #a8e6a1; }
-.editor .cm-number { color: #ffcf8a; }
-.editor .cm-comment { color: #9a9bc4; font-style: italic; }
-.editor .cm-variable, .editor .cm-property { color: #e6e7ff; }
-.editor .cm-operator { color: #c9caec; }
+.editor .cm-s-default .cm-keyword, .editor .cm-s-default .cm-operator.cm-keyword { color: #c4a7ff; }
+.editor .cm-s-default .cm-builtin { color: #8fd3ff; }
+.editor .cm-s-default .cm-def { color: #9fb4ff; }
+.editor .cm-s-default .cm-string { color: #a8e6a1; }
+.editor .cm-s-default .cm-number { color: #ffcf8a; }
+.editor .cm-s-default .cm-comment { color: #9a9bc4; font-style: italic; }
+.editor .cm-s-default .cm-variable, .editor .cm-s-default .cm-variable-2, .editor .cm-s-default .cm-property { color: #e6e7ff; }
+.editor .cm-s-default .cm-operator { color: #c9caec; }
 .editor-hint { margin: -6px 0 0; }
 
 .output-panel, .checks-panel {
@@ -459,7 +460,12 @@ pre.output.is-error { border-left-color: var(--danger); color: #8f1f3c; backgrou
   margin: 0; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
   padding: 20px 22px; min-width: 0;
 }
-.question legend, .question h3 { display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start; padding: 0; margin: 0 0 12px; font-size: 1.04rem; font-weight: 650; float: left; width: 100%; }
+.question legend, .question h3 {
+  display: grid; grid-template-columns: auto 1fr; gap: 12px; align-items: start;
+  padding: 0; margin: 0 0 12px; font-size: 1.04rem; font-weight: 650;
+}
+/* legend по умолчанию «врезается» в рамку fieldset; float возвращает его в обычный поток. */
+.question legend { float: left; width: 100%; }
 .question legend + * { clear: both; }
 .question-number {
   display: grid; place-items: center; min-width: 30px; height: 30px; padding: 0 6px; border-radius: 9px;

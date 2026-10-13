@@ -243,6 +243,9 @@
     }
   }
 
+  // Среда начинает загружаться сразу, пока слушатель читает условие.
+  startWorker().catch(() => setStatus("error", "Среда Python не загрузилась — повторим при запуске"));
+
   runBtn.addEventListener("click", () => run(false));
   checkBtn.addEventListener("click", () => run(true));
   resetBtn.addEventListener("click", () => {
