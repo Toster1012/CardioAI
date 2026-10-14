@@ -1,6 +1,6 @@
 @echo off
 rem Запуск платформы CardioAI в Windows. Подробности — в INSTALL.md.
-rem Параметры передаются серверу, например: start.bat --host 0.0.0.0 --port 8080
+rem Параметры передаются серверу, например: run.bat --host 0.0.0.0 --port 8080
 chcp 65001 >nul
 setlocal
 cd /d "%~dp0"
@@ -12,7 +12,7 @@ if not defined PYTHON (
 )
 if not defined PYTHON (
     echo Python не найден. Установите Python 3.11 или новее с сайта python.org,
-    echo отметив пункт "Add python.exe to PATH", и запустите start.bat снова.
+    echo отметив пункт "Add python.exe to PATH", и запустите run.bat снова.
     goto :error
 )
 
@@ -37,7 +37,8 @@ if errorlevel 1 (
 )
 
 echo.
-echo Сайт запущен: http://localhost:8000  (остановить — Ctrl+C)
+echo Запускаю сервер. Адрес сайта — в строке «Uvicorn running on» ниже (по умолчанию http://localhost:8000).
+echo Остановить сервер — Ctrl+C.
 "%VENV_PY%" manage.py run %*
 goto :eof
 

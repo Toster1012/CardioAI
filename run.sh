@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 # Запуск платформы CardioAI в macOS и Linux. Подробности — в INSTALL.md.
-# Параметры передаются серверу, например: ./start.sh --host 0.0.0.0 --port 8080
+# Параметры передаются серверу, например: ./run.sh --host 0.0.0.0 --port 8080
 set -e
 cd "$(dirname "$0")"
 
@@ -36,5 +36,6 @@ if ! "$VENV_PY" manage.py has-admin; then
 fi
 
 echo
-echo "Сайт запущен: http://localhost:8000  (остановить — Ctrl+C)"
+echo "Запускаю сервер. Адрес сайта — в строке «Uvicorn running on» ниже (по умолчанию http://localhost:8000)."
+echo "Остановить сервер — Ctrl+C."
 exec "$VENV_PY" manage.py run "$@"

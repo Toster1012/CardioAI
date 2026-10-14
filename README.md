@@ -37,7 +37,7 @@ git clone https://github.com/Toster1012/CardioAI.git
 cd CardioAI
 ```
 
-Windows — `start.bat`, macOS и Linux — `./start.sh`. Скрипт установит зависимости, попросит создать администратора и запустит сайт на http://localhost:8000.
+Windows — `run.bat` (двойной щелчок или `.\run.bat` в терминале), macOS и Linux — `./run.sh`. Скрипт установит зависимости, попросит создать администратора и запустит сайт на http://localhost:8000.
 
 Подробная инструкция — [INSTALL.md](INSTALL.md), она же в PDF: [docs/INSTALL.pdf](docs/INSTALL.pdf).
 
