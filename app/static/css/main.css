@@ -174,6 +174,10 @@ a:hover { color: var(--violet-600); }
 :focus-visible { outline: 3px solid var(--violet-500); outline-offset: 2px; border-radius: 4px; }
 
 code { font-family: var(--font-mono); font-size: 0.92em; }
+/* Без лигатур: в коде должно быть видно, что набрано именно <=, а не символ ≤. */
+code, pre, .editor .CodeMirror, .editor .CodeMirror pre.CodeMirror-line, .editor .CodeMirror pre.CodeMirror-line-like {
+  font-variant-ligatures: none; font-feature-settings: "liga" 0, "calt" 0;
+}
 
 .container { width: 100%; max-width: 1160px; margin: 0 auto; padding: 0 20px; }
 .container.narrow { max-width: 640px; }
@@ -746,6 +750,12 @@ pre.output.is-error { border-left-color: var(--danger); color: var(--danger-text
   .certificate-footer { grid-template-columns: 1fr; }
   .quiz-submit { flex-direction: column; align-items: stretch; text-align: center; }
   .lesson-footer { flex-wrap: wrap; }
+}
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .brand-name { display: none; }
+  .site-nav .btn-sm { padding: 6px 10px; }
 }
 
 @media (prefers-reduced-motion: reduce) {

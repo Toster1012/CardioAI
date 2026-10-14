@@ -1,3 +1,4 @@
+import mimetypes
 from urllib.parse import urlsplit
 
 from fastapi import FastAPI, Request
@@ -13,6 +14,11 @@ from .models import User
 from .routers import admin, auth, course, quiz
 from .security import RedirectTo
 from .web import STATIC_DIR, render
+
+# Офлайн-копия Pyodide отдаётся с сайта: браузер исполняет модули и WebAssembly
+# только с правильными типами, а в реестре Windows они могут отсутствовать.
+mimetypes.add_type("text/javascript", ".mjs")
+mimetypes.add_type("application/wasm", ".wasm")
 
 ERROR_TITLES = {
     403: "Доступ закрыт",
