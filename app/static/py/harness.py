@@ -105,10 +105,14 @@ def _collect_figures():
     if pyplot is None:
         return []
     images = []
-    for number in pyplot.get_fignums()[:MAX_FIGURES]:
-        buffer = io.BytesIO()
-        pyplot.figure(number).savefig(buffer, format="png", dpi=110, bbox_inches="tight")
-        images.append(base64.b64encode(buffer.getvalue()).decode("ascii"))
+    # Сборка matplotlib для Pyodide предупреждает об устаревших параметрах при сохранении
+    # рисунка; к коду слушателя это не относится, поэтому предупреждения здесь скрыты.
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        for number in pyplot.get_fignums()[:MAX_FIGURES]:
+            buffer = io.BytesIO()
+            pyplot.figure(number).savefig(buffer, format="png", dpi=110, bbox_inches="tight")
+            images.append(base64.b64encode(buffer.getvalue()).decode("ascii"))
     pyplot.close("all")
     return images
 

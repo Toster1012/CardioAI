@@ -54,7 +54,8 @@ def markdown_to_html(text: str) -> str:
     # fpdf2 не поддерживает теги внутри ячеек таблиц: оставляем в ячейках только текст.
     def plain_cell(match: re.Match) -> str:
         tag, body = match.group(1), match.group(2)
-        return f"<{tag}>{re.sub(r'<[^>]+>', '', body) or ' '}</{tag}>"
+        # Выравнивание по ширине в узких ячейках даёт огромные пробелы, поэтому — по левому краю.
+        return f'<{tag} align="left">{re.sub(r"<[^>]+>", "", body) or " "}</{tag}>'
 
     return re.sub(r"<(td|th)>(.*?)</\1>", plain_cell, html, flags=re.S)
 
@@ -124,6 +125,7 @@ def build() -> Path:
         html,
         font_family="Body",
         table_line_separators=True,
+        li_prefix_color=VIOLET,
         tag_styles={
             "h2": TextStyle(font_family="Body", font_style="B", font_size_pt=15, color=VIOLET, t_margin=6, b_margin=2),
             "h3": TextStyle(font_family="Body", font_style="B", font_size_pt=12, color=BLUE, t_margin=4, b_margin=1),
