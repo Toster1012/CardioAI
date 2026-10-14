@@ -51,3 +51,16 @@ sections:
       - {id: s4-l4, type: theory, minutes: 15, file: 04-validation-leakage.md, title: "Перекрёстная проверка, переобучение и утечки данных"}
       - {id: s4-l5, type: theory, minutes: 14, file: 05-calibration-importance.md, title: "Калибровка и важность признаков"}
       - {id: s4-l6, type: practice, minutes: 25, file: 06-practice-external.yaml, title: "Практика: проверка модели на другой клинике"}
+
+  - id: s5
+    dir: section-5
+    title: Выживаемость и ИИ в клинической практике
+    description: Анализ времени до события, модель Кокса и то, что отделяет работающую модель от пользы для пациента.
+    lessons:
+      - {id: s5-l1, type: theory, minutes: 13, file: 01-time-to-event.md, title: "Время до события и цензурирование"}
+      - {id: s5-l2, type: theory, minutes: 15, file: 02-kaplan-meier.md, title: "Кривые Каплана—Мейера и лог-ранговый тест"}
+      - {id: s5-l3, type: practice, minutes: 25, file: 03-practice-km.yaml, title: "Практика: выживаемость и фракция выброса"}
+      - {id: s5-l4, type: theory, minutes: 15, file: 04-cox.md, title: "Модель Кокса и отношение рисков"}
+      - {id: s5-l5, type: practice, minutes: 25, file: 05-practice-cox.yaml, title: "Практика: факторы риска в модели Кокса"}
+      - {id: s5-l6, type: theory, minutes: 13, file: 06-bias-fairness.md, title: "Смещения, справедливость и границы применимости"}
+      - {id: s5-l7, type: theory, minutes: 13, file: 07-deployment.md, title: "Внедрение ИИ в клинику: проверка, регулирование, ответственность"}
