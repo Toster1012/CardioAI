@@ -9,3 +9,5 @@ scipy==1.18.0
 scikit-learn==1.8.0
 statsmodels==0.14.6
 matplotlib==3.10.8
+# Сборка PDF-версии инструкции (scripts/build_manual_pdf.py).
+fpdf2==2.8.9
