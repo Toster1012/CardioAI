@@ -39,3 +39,15 @@ sections:
       - {id: s3-l5, type: practice, minutes: 25, file: 05-practice-tree.yaml, title: "Практика: дерево решений для прогноза исхода"}
       - {id: s3-l6, type: theory, minutes: 14, file: 06-ensembles.md, title: "Ансамбли: случайный лес и градиентный бустинг"}
       - {id: s3-l7, type: practice, minutes: 25, file: 07-practice-compare.yaml, title: "Практика: сравнение трёх моделей"}
+
+  - id: s4
+    dir: section-4
+    title: Оценка, валидация и интерпретация моделей
+    description: Как понять, что модели можно верить: метрики, пороги, перекрёстная проверка, утечки данных и проверка на другой клинике.
+    lessons:
+      - {id: s4-l1, type: theory, minutes: 14, file: 01-confusion-matrix.md, title: "Матрица ошибок: чувствительность, специфичность, прогностическая ценность"}
+      - {id: s4-l2, type: theory, minutes: 14, file: 02-roc-threshold.md, title: "ROC-кривая, PR-кривая и выбор порога"}
+      - {id: s4-l3, type: practice, minutes: 25, file: 03-practice-metrics.yaml, title: "Практика: метрики и порог для модели ИБС"}
+      - {id: s4-l4, type: theory, minutes: 15, file: 04-validation-leakage.md, title: "Перекрёстная проверка, переобучение и утечки данных"}
+      - {id: s4-l5, type: theory, minutes: 14, file: 05-calibration-importance.md, title: "Калибровка и важность признаков"}
+      - {id: s4-l6, type: practice, minutes: 25, file: 06-practice-external.yaml, title: "Практика: проверка модели на другой клинике"}
